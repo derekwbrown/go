@@ -116,6 +116,8 @@ var validCompilerFlags = []*regexp.Regexp{
 	re(`-w`),
 	re(`-x([^@\-].*)`),
 	re(`-v`),
+	re(`/Wall`),
+	re(`/W0`),
 }
 
 var validCompilerFlagsWithNextArg = []string{

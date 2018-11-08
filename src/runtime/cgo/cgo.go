@@ -21,7 +21,8 @@ package cgo
 #cgo netbsd LDFLAGS: -lpthread
 #cgo openbsd LDFLAGS: -lpthread
 
-#cgo CFLAGS: -Wall -Werror
+#cgo windows,!vstudio CFLAGS: -Wall -Werror
+#cgo windows,vstudio CFLAGS: /Wall /W0
 
 #cgo solaris CPPFLAGS: -D_POSIX_PTHREAD_SEMANTICS
 
